@@ -1,0 +1,19 @@
+<h1>My Task <i class="fa-solid fa-list-check">
+</i></h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+   <input type="checkbox">
+
+    <div class="card">
+      <div class="card-body">
+        <%= link_to task.title, task_path(task) %>
+      </div>
+    </div>
+
+  <% end %>
+</ul>
+
+<p>
+<%= link_to '+ Add a new task', tasks_new_path %>
+</p>
